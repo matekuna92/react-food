@@ -2,7 +2,7 @@ import styles from './Backdrop.module.css';
 
 const Backdrop = () => {
     return (
-    <div className={styles.backdrop}></div>
+        <div className={styles.backdrop}></div>
     );
 }
 
