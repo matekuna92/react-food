@@ -1,8 +1,8 @@
 import styles from './Backdrop.module.css';
 
-const Backdrop = () => {
+const Backdrop = (props) => {
     return (
-        <div className={styles.backdrop}></div>
+        <div className={styles.backdrop} onClick={props.onClose}></div>
     );
 }
 

@@ -7,7 +7,6 @@ import ModalOverlay from "./ModalOverlay";
 const Modal = (props) => {
     const portalElements = document.getElementById('overlays');
 
-
 // without portal:
 //    return (
 //        <Fragment>
@@ -18,7 +17,7 @@ const Modal = (props) => {
 
     return (
         <Fragment>
-            {ReactDOM.createPortal(<Backdrop />, portalElements)}
+            {ReactDOM.createPortal(<Backdrop onClose={props.onClose} />, portalElements)}
             {ReactDOM.createPortal(<ModalOverlay> {props.children} </ModalOverlay>, portalElements)}
         </Fragment>
     );
