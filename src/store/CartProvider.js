@@ -3,7 +3,7 @@ import CartContext from './cart-context';
 
 const defaultCartState = {
     items: [],
-    amount: 0
+    totalAmount: 0
 };
 
 const cartReducer = (state, action) => {
@@ -13,7 +13,7 @@ const cartReducer = (state, action) => {
 
         return {
             items: updatedItems,
-            amount: updatedTotalAmount
+            totalAmount: updatedTotalAmount
         };
     }
 
