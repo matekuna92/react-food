@@ -11,6 +11,14 @@ const Cart = (props) => {
     console.log('cartctx totalamount:', cartCtx.totalAmount);
     const cartHasItems = cartCtx.items.length > 0;
 
+    const cartItemAddHandler = item => {
+
+    }
+
+    const cartItemRemoveHandler = id => {
+
+    }
+
     const cartItems = <ul className={styles['cart-items']}>
     {cartCtx.items.map(cartItem =>
         <CartItem
@@ -18,6 +26,8 @@ const Cart = (props) => {
             name={cartItem.name}
             amount={cartItem.amount}
             price={cartItem.price}
+            onAdd={cartItemAddHandler.bind(null, cartItem)}
+            onRemove={cartItemRemoveHandler.bind(null, cartItem.id)}
         /> )}
     </ul>;
 
