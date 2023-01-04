@@ -22,7 +22,8 @@ const cartReducer = (state, action) => {
             };
 
             updatedItems = [...state.items];
-            updatedItems[existingCartItem] = updatedItem;
+            updatedItems[existingCartItemIndex] = updatedItem;
+            console.log('updatedItems:', updatedItems);
         }
         // if item added to the cart for the first time
         else {
