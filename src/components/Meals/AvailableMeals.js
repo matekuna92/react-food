@@ -16,7 +16,7 @@ const AvailableMeals = () => {
             setError(null);
 
             try {
-                const response = await fetch('https://react-http-9c568-default-rtdb.europe-west1.firebasedatabase.app/');
+                const response = await fetch('https://react-http-9c568-default-rtdb.europe-west1.firebasedatabase.app/meals.json');
                 const responseData = await response.json();
 
                 const fetchedMeals = [];
