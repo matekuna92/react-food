@@ -44,8 +44,14 @@ const Checkout = (props) => {
         if(!formIsValid) {
             return;
         }
-        // send form data if form is valid
 
+        // send form data if form is valid
+        props.onSubmit({
+            name: enteredName,
+            street: enteredStreet,
+            city: enteredCity,
+            postalCode: enteredPostal
+        });
     }
 
     return (
