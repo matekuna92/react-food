@@ -30,7 +30,10 @@ const Cart = (props) => {
         // send both userdata and cart data
         fetch('https://react-http-9c568-default-rtdb.europe-west1.firebasedatabase.app/orders.json', {
             method: 'POST',
-            body: JSON.stringify(userData)
+            body: JSON.stringify({
+                userData: userData,
+                orderedItems: cartCtx.items
+            })
         });
     }
 
