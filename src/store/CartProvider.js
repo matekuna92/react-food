@@ -81,7 +81,7 @@ const CartProvider = (props) => {
     }
 
     const clearItemsFromCart = items => {
-        dispatchCartAction({type: 'CLEAR_ITEMS_FROM_CART', items: items});
+        dispatchCartAction({type: 'CLEAR_ITEMS_FROM_CART'});
     }
 
     const cartContext = {
